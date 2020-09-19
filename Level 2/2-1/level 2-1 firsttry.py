@@ -7,10 +7,10 @@ class Node:
       root.value = 1
       return root
 
-    ch = 1 # current height
-    counter = 1 # node counter
+    ch = 1            # current height
+    counter = 1       # node counter
     root = Node(None) # root of the tree
-    n = root # current node
+    n = root          # current node
 
     # generate the tree
     while True:
@@ -58,6 +58,8 @@ class Node:
     self.left = None
     self.right = None
   
+  ####################################################################
+  # must be removed before sending since foobar doesn't accept any i/o
   def displayTree(self):
     n = self
     h = 1
@@ -78,7 +80,8 @@ class Node:
 
     if p == h:
       print self.value,
-  
+  ####################################################################
+
   def getParentValueOf(self, v):
     n = self
     while True:
