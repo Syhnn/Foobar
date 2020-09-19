@@ -1,5 +1,4 @@
-Escape Pods
-===========
+# Escape Pods
 
 You've blown up the LAMBCHOP doomsday device and broken the bunnies out of Lambda's prison - and now you need to escape from the space station as quickly and as orderly as possible! The bunnies have all gathered in various locations throughout the station, and need to make their way towards the seemingly endless amount of escape pods positioned in other parts of the station. You need to get the numerous bunnies through the various rooms to the escape pods. Unfortunately, the corridors between the rooms can only fit so many bunnies at a time. What's more, many of the corridors were resized to accommodate the LAMBCHOP, so they vary in how many bunnies can move through them at a time.  
   
@@ -31,18 +30,18 @@ Then in each time step, the following might happen:
 
 So, in total, 16 bunnies could make it to the escape pods at 4 and 5 at each time step.  (Note that in this example, room 3 could have sent any variation of 8 bunnies to 4 and 5, such as 2/6 and 6/6, but the final solution remains the same.)
 
-Languages
-=========
+## Languages
   
 To provide a Java solution, edit Solution.java  
 To provide a Python solution, edit solution.py  
   
-Test cases
-==========
+## Test cases
+
 Your code should pass the following test cases.  
 Note that it may also be run against hidden test cases not shown here.  
   
--- Java cases --  
+### Java cases 
+
 Input:  
 ```
 Solution.solution({0, 1},
@@ -77,7 +76,8 @@ Output:
     6
 ```
   
--- Python cases --  
+### Python cases
+
 Input:  
 ```
 solution.solution([0],
