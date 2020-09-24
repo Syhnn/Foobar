@@ -7,8 +7,8 @@ def solution(dimensions, your_position, guard_position, distance):
   max_distance = distance
 
   hit_count = 0
-  vertical_case = False
-  horizontal_case = False
+  horizontal_case = player_y == guard_y
+  vertical_case = player_x == guard_x
   
   mirror_players = dict()
   mirror_guards = dict()  
@@ -24,11 +24,6 @@ def solution(dimensions, your_position, guard_position, distance):
   angle = math.atan2(float(guard_y - player_y), float(guard_x - player_x))
   hit_list.append(angle)
   hit_count = hit_count + 1
-
-  if player_x == guard_x:
-    horizontal_case = True
-  if player_y == guard_y:
-    vertical_case = True
   
   i_limit = max_distance / map_width + 1
   j_limit = max_distance / map_height + 1
@@ -36,7 +31,7 @@ def solution(dimensions, your_position, guard_position, distance):
   for x in range(- i_limit, i_limit + 1):
     for y in range(- j_limit, j_limit + 1):
 
-      if horizontal_case and x == 0 or vertical_case and y == 0 or x == y == 0:
+      if vertical_case and x == 0 or horizontal_case and y == 0 or x == y == 0:
         continue
       px = (x / 2 * player_x * 2) + ((x + 1) / 2 * (map_width - player_x) * 2)
       py = (y / 2 * player_y * 2) + ((y + 1) / 2 * (map_height - player_y) * 2)
