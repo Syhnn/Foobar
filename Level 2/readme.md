@@ -51,6 +51,6 @@ I think I missed the point when I did this one on Foobar. This is a very easy qu
 But I think that was a mistake, even when the question is easy you should probably think about it to check if there isn't a way of simplifying it.  
 here I figured I had to sum all integers up to x, then continue up to y but starting from x. What I forgot about was this formula :
 ```
-sum(1, n) = x * (x - 1) / 2
+sum(1, n) = n * (n - 1) / 2
 ```
 With this I realised I could just calculate the sum of integers from 1 to x+y, add x, and that's it.
